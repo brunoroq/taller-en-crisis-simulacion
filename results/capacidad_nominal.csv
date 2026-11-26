@@ -1,0 +1,5 @@
+﻿estacion,servidores,servicio_medio_por_visita_min,visitas_esperadas_por_vehiculo,capacidad_nominal_vehiculos_h,factor_equilibrio_trabajo
+recepcion,1,5,1,12.0,6.0
+diagnostico,1,15,1,4.0,2.0
+reparacion,3,63.5,1.0526315789473684,2.6929133858267718,1.3464566929133859
+calidad,1,10,1.0526315789473684,5.7,2.85

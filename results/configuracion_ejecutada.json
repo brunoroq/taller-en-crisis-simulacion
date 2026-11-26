@@ -1,0 +1,201 @@
+{
+  "replicas_por_escenario": 100,
+  "semilla_maestra": 80912026,
+  "python": "3.12.14",
+  "dependencias": {
+    "ciw": "3.2.7",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "matplotlib": "3.10.3"
+  },
+  "economia": "supuestos ilustrativos pendientes de validación",
+  "configuracion_base": {
+    "classes": [
+      {
+        "name": "neumaticos",
+        "share": 0.35,
+        "repair": [
+          15,
+          30,
+          45
+        ],
+        "price_clp": 50000,
+        "variable_cost_clp": 18000
+      },
+      {
+        "name": "electrico",
+        "share": 0.3,
+        "repair": [
+          30,
+          60,
+          90
+        ],
+        "price_clp": 100000,
+        "variable_cost_clp": 32000
+      },
+      {
+        "name": "mecanica_general",
+        "share": 0.35,
+        "repair": [
+          60,
+          90,
+          150
+        ],
+        "price_clp": 170000,
+        "variable_cost_clp": 65000
+      }
+    ],
+    "arrival_bands": [
+      {
+        "duration_min": 120,
+        "arrivals_per_hour": 3
+      },
+      {
+        "duration_min": 240,
+        "arrivals_per_hour": 1.5
+      },
+      {
+        "duration_min": 120,
+        "arrivals_per_hour": 2
+      }
+    ],
+    "reception": [
+      3,
+      5,
+      7
+    ],
+    "diagnosis": [
+      10,
+      15,
+      20
+    ],
+    "quality": [
+      5,
+      10,
+      15
+    ],
+    "servers": [
+      1,
+      1,
+      3,
+      1
+    ],
+    "rework_probability": 0.05,
+    "economics": {
+      "daily_wages_clp": [
+        30000,
+        43000,
+        48000,
+        38000
+      ],
+      "overtime_rates_clp_h": [
+        6000,
+        8000,
+        9000,
+        7000
+      ],
+      "operating_cost_clp": 70000,
+      "rework_material_fraction": 0.35,
+      "better_qc_cost_clp": 5000,
+      "scheduling_cost_clp": 3000
+    }
+  },
+  "escenarios": [
+    {
+      "code": "E0",
+      "label": "Base",
+      "factor": 1.0,
+      "extra_mechanic": false,
+      "better_qc": false,
+      "uniform_arrivals": false
+    },
+    {
+      "code": "E1",
+      "label": "Carga",
+      "factor": 0.5,
+      "extra_mechanic": false,
+      "better_qc": false,
+      "uniform_arrivals": false
+    },
+    {
+      "code": "E1",
+      "label": "Carga",
+      "factor": 0.75,
+      "extra_mechanic": false,
+      "better_qc": false,
+      "uniform_arrivals": false
+    },
+    {
+      "code": "E1",
+      "label": "Carga",
+      "factor": 1.0,
+      "extra_mechanic": false,
+      "better_qc": false,
+      "uniform_arrivals": false
+    },
+    {
+      "code": "E1",
+      "label": "Carga",
+      "factor": 1.25,
+      "extra_mechanic": false,
+      "better_qc": false,
+      "uniform_arrivals": false
+    },
+    {
+      "code": "E1",
+      "label": "Carga",
+      "factor": 1.5,
+      "extra_mechanic": false,
+      "better_qc": false,
+      "uniform_arrivals": false
+    },
+    {
+      "code": "E1",
+      "label": "Carga",
+      "factor": 1.75,
+      "extra_mechanic": false,
+      "better_qc": false,
+      "uniform_arrivals": false
+    },
+    {
+      "code": "E1",
+      "label": "Carga",
+      "factor": 2.0,
+      "extra_mechanic": false,
+      "better_qc": false,
+      "uniform_arrivals": false
+    },
+    {
+      "code": "E2",
+      "label": "Cuarto mecánico",
+      "factor": 1.0,
+      "extra_mechanic": true,
+      "better_qc": false,
+      "uniform_arrivals": false
+    },
+    {
+      "code": "E3",
+      "label": "Menos retrabajo",
+      "factor": 1.0,
+      "extra_mechanic": false,
+      "better_qc": true,
+      "uniform_arrivals": false
+    },
+    {
+      "code": "E4",
+      "label": "Llegadas uniformes",
+      "factor": 1.0,
+      "extra_mechanic": false,
+      "better_qc": false,
+      "uniform_arrivals": true
+    },
+    {
+      "code": "E5",
+      "label": "Mecánico + calidad",
+      "factor": 1.0,
+      "extra_mechanic": true,
+      "better_qc": true,
+      "uniform_arrivals": false
+    }
+  ]
+}
